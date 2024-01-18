@@ -22,8 +22,8 @@ class ProductController extends Controller
             $total_count = Product::where('category_id', $request->category)->count();
             $category = Category::find($request->category);
         } else {
-            $products = Product::sortable()->paginate(15);
-                        $total_count = "";
+              $products = Product::sortable()->paginate(15);
+            $total_count = "";
             $category = null;
         }
         $categories = Category::all();
